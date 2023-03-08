@@ -1,0 +1,7 @@
+git:
+  paging:
+    colorArg: never
+    pager: delta --dark --paging=never --side-by-side
+
+os:
+  openLinkCommand: "xdg-open {{link}} >/dev/null"

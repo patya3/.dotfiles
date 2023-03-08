@@ -1,0 +1,108 @@
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$buf\
+$c\
+$cmake\
+$cobol\
+$container\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$haskell\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$status\
+$shell\
+$character"""
+
+right_format = """$time"""
+
+[cmd_duration]
+disabled = true
+
+[git_status]
+disabled = false
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
+
+[time]
+disabled = true
+format = '[\[ $time \]]($style) '
+time_format = "%R"
+utc_time_offset = "+2"
+
+[directory]
+format = " [](216)  [$path]($style)[$read_only]($read_only_style) "
+style = "183"
+
+[git_branch]
+style = "115"
+
+[character]
+success_symbol = "[ ❯](158) "
+error_symbol = "[ ❯](198) "
+vicmd_symbol = "[ ❮ ](green)"
+vimcmd_visual_symbol = "[ ❮ ](bold yellow)"
+vimcmd_replace_one_symbol = "[ ❮ ](bold purple)"
+vimcmd_replace_symbol = "[ ❮ ](bold purple)"

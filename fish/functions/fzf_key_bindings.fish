@@ -1,0 +1,1 @@
+/home/patya3/.fzf/shell/key-bindings.fish
