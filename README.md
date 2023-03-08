@@ -3,7 +3,9 @@
 - alacritty
 - tmux
 - neovim (check plugins, and try new config)
-- i3 (feh)
+- i3
+  - feh
+  - rofi (themes)
 - zsh (zshrc plugins)
   - oh-my-zsh
 - fzf
