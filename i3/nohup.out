@@ -1,0 +1,18 @@
+Gtk-Message: 22:19:29.669: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+[2023-03-03T21:19:31Z ERROR glean_core::metrics::ping] Invalid reason code startup for ping newtab
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Gtk-Message: 22:21:00.182: Not loading module "atk-bridge": The functionality is provided by GTK natively. Please try to not load it.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+[2023-03-03T21:21:23Z ERROR viaduct::backend::ffi] Missing HTTP status
+[2023-03-03T21:21:23Z ERROR viaduct::backend::ffi] Missing HTTP status
