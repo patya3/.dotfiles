@@ -2,7 +2,7 @@
 set -g fish_term24bit 1
 set fish_greeting
 set EDITOR "nvim"
-set FORGE_EMAIL "patrik.meszaros@aensys.hu"
+set FORGE_EMAIL {work_email}
 set FORGE_API_TOKEN {api_toke}
 export FORGE_EMAIL FORGE_API_TOKEN
 
