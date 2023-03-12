@@ -1,11 +1,13 @@
 ## Apps to install
 
 - alacritty
+  - picom
 - tmux
 - neovim (check plugins, and try new config)
 - i3
   - feh
   - rofi (themes)
+  - polybar (build from source)
 - zsh (zshrc plugins)
   - oh-my-zsh
 - fzf
