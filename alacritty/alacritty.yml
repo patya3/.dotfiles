@@ -1,9 +1,13 @@
 env:
   TERM: alacritty
 font:
-  size: 16.0
+  normal:
+    family: Caskaydia Cove Nerd Font
+  size: 13.0
 window:
-  opacity: 0.8
+  padding:
+    x: 4
+  # opacity: 1.0
 key_bindings:
   - { key: V, mods: Control, action: Paste }
   - { key: C, mods: Control, action: Copy }
@@ -13,7 +17,7 @@ colors:
   name: 3024 (dark)
   author: Chris Kempson
   primary:
-    background: "#090300"
+    # background: "#090300"
     foreground: "#a5a2a2"
   cursor:
     text: "#090300"
