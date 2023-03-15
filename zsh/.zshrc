@@ -2,6 +2,8 @@
 
 path+=/home/patya3/.nvm/versions/node/v16.15.0/bin:/home/patya3/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
 export PATH=$HOME/bin:/usr/local/bin:/home/patya3/scripts/jump.sh:$PATH
+export EDITOR='/usr/bin/nvim'
+export PATH=$HOME/.config/rofi/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -10,7 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="awesomepanda"
+ZSH_THEME="awesomepanda-custom"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -84,8 +86,9 @@ ZSH_HIGHLIGHT_STYLES[default]='fg=cyan'
 
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOCONNECT=false
-ZSH_TMUX_CONFIG=$HOME/.config/tmux/tmux.conf
+ZSH_TMUX_CONFIG=$HOME/.tmux.conf
 ZSH_TMUX_UNICODE=true
+ZLE_PROMPT_INDENT=2
 source $ZSH/oh-my-zsh.sh
 
 
@@ -117,4 +120,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
