@@ -129,26 +129,27 @@ B:DriverLayerButton
 # layer1
 
 [Layer1]
+# layer 1 is unused
 #J:LCtrl
 #K:LShift
 #L:LAlt
 #Q:LAlt+Q
 #### remove it after getting good at vim
-W:LCtrl+W
-Q:LCtrl+Q
-D:LCtrl+D
-E:LCtrl+E
-A:LCtrl+A
-S:LCtrl+S
-Z:LCtrl+Z
-X:LCtrl+X
-C:LCtrl+C
-V:LCtrl+V
-F:LCtrl+F
-G:LCtrl+G
-O:LCtrl+O
-P:LCtrl+P
-N:LCtrl+N
+#W:LCtrl+W
+#Q:LCtrl+Q
+#D:LCtrl+D
+#E:LCtrl+E
+#A:LCtrl+A
+#S:LCtrl+S
+#Z:LCtrl+Z
+#X:LCtrl+X
+#C:LCtrl+C
+#V:LCtrl+V
+#F:LCtrl+F
+#G:LCtrl+G
+#O:LCtrl+O
+#P:LCtrl+P
+#N:LCtrl+N
 
 #######
 # layer2
@@ -157,23 +158,13 @@ N:LCtrl+N
 BackTick:Macro(CSA5_BackTick)
 #W:Macro(CSA5_w)
 W:LShift+OpenSquareBrace
-R:Macro(CSA5_r)
-T:Macro(CSA5_t)
-P:Macro(CSA5_p)
 A:LShift+D6
 D:LShift+D4
-#S:Macro(CSA5_s)
 S:LShift+CloseSquareBrace
-#D:Macro(CSA5_d)
 J:LCtrl+B
-K:Macro(CSA5_k)
-L:Macro(CSA5_l)
-X:Macro(CS_Slash)
-N:Macro(CSA5_n)
-M:Macro(CSA5_m)
 Q:LAlt+Q
-#E:LShift+D4
-#D1:LWin+D1
+CapsLock:LCtrl+C
+Space:Esc
 D1:LCtrl+LWin+D1
 D2:LCtrl+LWin+D2
 D3:LCtrl+LWin+D3
@@ -183,10 +174,35 @@ D6:LCtrl+LWin+D6
 D7:LCtrl+LWin+D7
 D8:LCtrl+LWin+D8
 D9:LCtrl+LWin+D9
-CapsLock:LCtrl+C
-Space:Esc
-LShift:Enter
-Tab:LCtrl+B
+R:LWin+R
+E:LWin+E
+T:LWin+E
+X:LWin+X
+Z:LWin+Z
+C:LWin+C
+V:LWin+V
+B:LWin+B
+N:LWin+N
+M:LWin+M
+F:LWin+F
+H:LWin+H
+K:LWin+K
+U:LWin+U
+Y:LWin+Y
+T:LWin+T
+O:LWin+O
+I:LWin+I
+#R:Macro(CSA5_r)
+#T:Macro(CSA5_t)
+#P:Macro(CSA5_p)
+#K:Macro(CSA5_k)
+#L:Macro(CSA5_l)
+#X:Macro(CS_Slash)
+#N:Macro(CSA5_n)
+#M:Macro(CSA5_m)
+#E:LShift+D4
+#D1:LWin+D1
+
 
 #######
 # layer3
