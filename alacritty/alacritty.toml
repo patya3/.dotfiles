@@ -1,0 +1,67 @@
+import = [
+  "./theme.toml",
+]
+[colors.bright]
+black = "#5c5855"
+blue = "#01a0e4"
+cyan = "#b5e4f4"
+green = "#01a252"
+magenta = "#a16a94"
+red = "#db2d20"
+white = "#f7f7f7"
+[colors.cursor]
+cursor = "#a5a2a2"
+text = "#090300"
+
+[colors.normal]
+black = "#090300"
+blue = "#01a0e4"
+cyan = "#b5e4f4"
+green = "#01a252"
+magenta = "#a16a94"
+red = "#db2d20"
+white = "#a5a2a2"
+yellow = "#fded02"
+
+[colors.primary]
+background = "#121314"
+# background = "#090300" # for the galaxy background
+foreground = "#a5a2a2"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 17.0
+
+# [window]
+# padding = { x = 10, y = 15 }
+
+[font.normal]
+family = "Caskaydia Cove Nerd Font"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control"
+
+[[keyboard.bindings]]
+chars = "\u0003"
+key = "C"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[mouse]
+hide_when_typing = true
+
+[shell]
+args = ["--login"]
+program = "/usr/bin/zsh"
