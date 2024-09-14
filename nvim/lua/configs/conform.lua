@@ -6,14 +6,23 @@ local options = {
     javascript = { "prettierd" },
     typescript = { "prettierd" },
     vue = { "prettierd" },
-    python = { "black" },
+    python = { "flake8", "black" },
+    json = { "prettierd" },
   },
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_format = "fallback",
-  },
+  format_on_save = function(bufnr)
+    local ignore_filetypes = { "vue" }
+
+    if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+      return
+    end
+
+    return {
+      -- These options will be passed to conform.format()
+      timeout_ms = 500,
+      lsp_format = "fallback",
+    }
+  end,
 }
 
 return options

@@ -16,6 +16,7 @@ nomap("n", "<leader>/")
 nomap("n", "<leader>b")
 -- nomap("n", "<leader>gb")
 nomap("n", "<leader>gt")
+-- nomap("n", "<leader>sh")
 
 -- default mappings
 map("n", "<leader>s", "<cmd>w<CR>", { desc = "﬚  save file" })
@@ -25,12 +26,12 @@ map("n", "<leader><leader>q", "<cmd>bufdo bwipeout<CR>", { desc = "﬚  close al
 map(
   "n",
   "<leader>e",
-  "<cmd>Telescope find_files hidden=true no_ignore=false previewer=false<CR>",
+  "<cmd>Telescope find_files hidden=true no_ignore=true previewer=false<CR>",
   { desc = "🔍 find files" }
 )
 map("n", "<leader>q", "<cmd>bd<CR>", { desc = "close buffer" })
 map("n", "gh", function()
-  vim.lsp.buf.signature_help()
+  vim.lsp.buf.hover()
 end, { desc = "document diagnostic" })
 map("n", "<leader>lf", function()
   vim.diagnostic.open_float { border = "rounded" }
@@ -53,6 +54,9 @@ map("n", "<leader>nc", function()
   insert_current_filename()
 end, { desc = "console log js" })
 map("n", "c", '"_c', { desc = "change without yanking" })
+map("v", "c", '"_c', { desc = "change without yanking" })
+map("v", "p", '"_dP', { noremap = true }) -- NOTE: im not sure if i need this forever
+-- map("v", "p", '"_p', { desc = "copy in visual mode without yanking" })
 map("n", "x", '"_x', { desc = "del char without yanking" })
 map("n", "s", '"_s', { desc = "swap without yanking" })
 map("n", "<leader>d", '"_d', { desc = "delete without yanking" })
@@ -65,13 +69,56 @@ map("i", "<C-Space>", function()
   require("cmp").complete()
 end)
 map("n", "<leader>g", "<cmd>FloatermNew lazygit<CR>", { desc = " Lazygit" })
+-- random
 
 -- TODO: do spectre commands
+map("n", "<leader>S", '<cmd>lua require("spectre").toggle()<CR>', {
+  desc = "Toggle Spectre",
+})
+map("n", "<leader>rp", '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+  desc = "Search current word",
+})
+map("v", "<leader>rp", '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+  desc = "Search current word",
+})
+map("n", "<leader>rf", '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+  desc = "Search on current file",
+})
 
 -- gitsigns
+map("n", "<leader>rh", function()
+  package.loaded.gitsigns.reset_hunk()
+end, { desc = "Reset Hunk" })
+map("n", "<leader>ph", function()
+  package.loaded.gitsigns.preview_hunk()
+end, { desc = "Preview Hunk" })
+
 map("n", "<leader>bl", function()
   package.loaded.gitsigns.blame_line()
 end, { desc = "Blame line" })
+
+map("n", "]c", function()
+  if vim.wo.diff then
+    return "]c"
+  end
+  vim.schedule(function()
+    package.loaded.gitsigns.next_hunk()
+  end)
+  return "<Ignore>"
+end, { desc = "Jump to next hunk" })
+
+map("n", "[c", function()
+  if vim.wo.diff then
+    return "[c"
+  end
+  vim.schedule(function()
+    package.loaded.gitsigns.prev_hunk()
+  end)
+  return "<Ignore>"
+end, { desc = "Jump to next hunk" })
+
+-- copilot
+-- ["<leader>pc"] = { "<cmd> Copilot panel <CR>", "Show Copilot panel" }
 
 -- harpoon
 map("n", "<leader>na", function()

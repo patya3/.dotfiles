@@ -1,5 +1,6 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
+-- random
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -41,12 +42,31 @@ local nomap = vim.keymap.del
 local autocmd = vim.api.nvim_create_autocmd
 
 autocmd("LspAttach", {
-  callback = function (args)
-    vim.schedule(function ()
-      nomap("n","gd", { buffer = args.buf });
-      nomap("n","gr", { buffer = args.buf });
-      nomap("n", "<leader>sh", { buffer = args.buf })
+  callback = function(args)
+    vim.schedule(function()
+      map("n", "gd", function()
+        local function on_list()
+          vim.api.nvim_command "Trouble lsp_definitions"
+        end
+        vim.lsp.buf.definition { on_list = on_list }
+      end, { desc = "⚙️ lsp definition", buffer = args.buf })
+
+      map("n", "gr", function()
+        vim.api.nvim_command "Trouble lsp_references"
+      end, { desc = "⚙️ workspace diagnostic", buffer = args.buf })
+
+      -- map("n", "gh", function()
+      --   vim.lsp.buf.hover()
+      -- end, { desc = "document diagnostic", buffer = args.buf })
+      --
+      -- map("n", "<leader>lf", function()
+      --   vim.diagnostic.open_float { border = "rounded" }
+      -- end, { desc = "document diagnostic", buffer = args.buf })
+
+      map("n", "<leader>sh", function()
+        return
+      end, { buffer = args.buf })
     end)
     -- nomap("n", "gd", {buffer = args.buf});
-  end
+  end,
 })
