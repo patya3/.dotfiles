@@ -4,4 +4,5 @@ git:
     pager: delta --dark --paging=never --side-by-side
 
 os:
-  openLinkCommand: "xdg-open {{link}} >/dev/null"
+  openLink: "xdg-open {{link}} >/dev/null"
+  edit: "nvim"

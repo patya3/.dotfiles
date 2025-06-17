@@ -1,38 +1,18 @@
-import = [
-  "./theme.toml",
-]
-[colors.bright]
-black = "#5c5855"
-blue = "#01a0e4"
-cyan = "#b5e4f4"
-green = "#01a252"
-magenta = "#a16a94"
-red = "#db2d20"
-white = "#f7f7f7"
 [colors.cursor]
 cursor = "#a5a2a2"
 text = "#090300"
 
-[colors.normal]
-black = "#090300"
-blue = "#01a0e4"
-cyan = "#b5e4f4"
-green = "#01a252"
-magenta = "#a16a94"
-red = "#db2d20"
-white = "#a5a2a2"
-yellow = "#fded02"
-
 [colors.primary]
-background = "#121314"
-# background = "#090300" # for the galaxy background
+# background = "#121314"
+background = '#111111'
+# # background = "#090300" # for the galaxy background
 foreground = "#a5a2a2"
 
 [env]
-TERM = "alacritty"
+TERM = "xterm-256color"
 
 [font]
-size = 17.0
+size = 19.0
 
 # [window]
 # padding = { x = 10, y = 15 }
@@ -62,6 +42,15 @@ key = "F11"
 [mouse]
 hide_when_typing = true
 
-[shell]
+[general]
+import = [
+  "./ayu_dark-theme.toml",
+]
+
+[terminal]
+
+[terminal.shell]
 args = ["--login"]
 program = "/usr/bin/zsh"
+
+

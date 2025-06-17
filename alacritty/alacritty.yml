@@ -3,11 +3,18 @@ env:
 font:
   normal:
     family: Caskaydia Cove Nerd Font
-  size: 13.0
-window:
-  padding:
-    x: 4
-  # opacity: 1.0
+      #family: monospace
+  size: 18.0
+# window:
+#   padding:
+#     x: 10
+      # opacity: 0.6
+mouse:
+  hide_when_typing: true
+shell:
+  program: /usr/bin/zsh
+  args:
+    - --login
 key_bindings:
   - { key: V, mods: Control, action: Paste }
   - { key: C, mods: Control, action: Copy }
@@ -17,6 +24,7 @@ colors:
   name: 3024 (dark)
   author: Chris Kempson
   primary:
+    background: "#14161a"
     # background: "#090300"
     foreground: "#a5a2a2"
   cursor:
